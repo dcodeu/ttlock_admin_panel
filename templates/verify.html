@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="box">
+    <h1 class="title is-3">Enter Verification Code</h1>
+    <form method="POST" action="{{ url_for('auth.verify') }}">
+        <div class="field">
+            <label class="label">Verification Code</label>
+            <div class="control">
+                <input class="input" type="text" name="code" required>
+            </div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <button class="button is-success" type="submit">Verify and Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
